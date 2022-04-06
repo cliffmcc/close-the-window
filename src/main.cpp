@@ -1,5 +1,11 @@
 /*
  * Close The Window - copyright 2021 Cliff McCollum
+ *
+ * 1. kSERVER_URL: You'll need to request an API key from "api.weatherapi.com" that matches your local area
+ * 2. kNOTIFICATION_URL: You'll need a notification URL key from IFTTT
+ * 3. kWIFI_SSID: Your WiFi SSID
+ * 4. kWIFI_PASS: Your WiFi password
+ *
  */
 #include <algorithm>
 #include <Arduino.h>
@@ -12,10 +18,12 @@
 
 #include "main.h"
 
-const String kWIFI_SSID = "SlowPokeZ";
-const String kWIFI_PASS = "deadbeef33deadbeef44";
-const String kSERVER_URL = "http://api.weatherapi.com/v1/forecast.json?key=e35654c6d42f4a88837115818212604&q=CB19YH&days=1&aqi=no&alerts=no";
-const String kNOTIFICATION_URL = "http://maker.ifttt.com/trigger/ConservatoryWindowOpen/with/key/c8rtbWw3dmB7sPOVONQauu";
+#include "keys.h" // Create this file and place local copy of the four keys below
+
+//const String kWIFI_SSID = "<wifiSID>";
+//const String kWIFI_PASS = "<wifipassword>";
+//const String kSERVER_URL = "http://api.weatherapi.com/v1/forecast.json?key=<api-key>&q=<location>&days=1&aqi=no&alerts=no";
+//const String kNOTIFICATION_URL = "http://maker.ifttt.com/trigger/ConservatoryWindowOpen/with/key/<IFTT-key>";
 const String kNTP_POOL = "europe.pool.ntp.org";
 const int kWINDOW_PIN = 12; // also known as D6
 const int kLED_PIN = 2; // also known as D4
