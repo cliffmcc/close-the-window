@@ -1,3 +1,6 @@
+/*
+ * Close The Window - copyright 2021 Cliff McCollum
+ */
 #include <algorithm>
 #include <Arduino.h>
 #include <TimeLib.h>
