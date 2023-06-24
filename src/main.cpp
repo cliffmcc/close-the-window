@@ -206,7 +206,7 @@ int get_temperature_tonight() {
         // read all data from server
         char temperature_buffer[8];
         bool found_it = false;
-        int temp_count = 0;
+        unsigned int temp_count = 0;
 
         temperature_buffer[0] = 0;
         found_it = stream->findUntil("\"mintemp_c\":", "}]}]}}");

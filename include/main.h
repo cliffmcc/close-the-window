@@ -6,7 +6,7 @@
 #define UNTITLED_MAIN_H
 
 #define kOUTPUT_DEVICE Serial
-//#define _DEBUG_
+#define _DEBUG_
 #ifdef _DEBUG_
 #define DEBUG_WRAP(x) x
 #else
